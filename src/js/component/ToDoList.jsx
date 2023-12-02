@@ -12,12 +12,23 @@ const ToDoList = () => {
     
     getTask();
 
+    //async function getUsers() {
+    //    const resApiDos = await fetch("https://playground.4geeks.com/apis/fake/todos/user");
+    //    const user = await resApiDos.json();
+    //    setList(user);
+    //}
+
+    //getUsers();
+    // nota quiero agregar un dropdown que permita seleccionar el usuario que luego se reescribiria en la url del fecth y asi 
+    // podria cambiar las tareas segun el usuario
+
     return (
         <div className="mx-5 mt-5">
             <ul className="lista list-group">
                 <h1 className="text-center">
                     Todo List
                 </h1>
+                              
                 {list.map((listItem, listIndex) => {
                     return (
                         <li className="list-group-item" key={listIndex}> {listItem.label} </li>
