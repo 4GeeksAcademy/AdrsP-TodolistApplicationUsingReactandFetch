@@ -96,7 +96,8 @@ const ToDoList = () => {
 
     // funcion para activarse con el enter la escribi aqui por escribir la verdad podria ir en la linea del onkeyDown
     const enterIsPress =()=>{
-        setList(list.concat(objAux))
+        //setList(list.concat(objAux))
+        setList(...list,{"label": valorInput,"done": false})
         setValorInput("")
     }
 
@@ -131,7 +132,7 @@ const ToDoList = () => {
                     Usted tiene {list.length} tareas pendientes
                 </li>
             </ul>
-            <h1>Botones de accionamiento manual para pruebas, por eso tan feos</h1>
+            <h1>Botones de accionamiento manual para pruebas</h1>
             <button className="btn btn-primary m-1" onClick={deleteUser}> elimina usuario </button>
             <button className="btn btn-primary m-1" onClick={printList}> imprime list en consola </button>
             <button className="btn btn-primary m-1" onClick={getUsers}> get los valores del usuario en la api</button>
